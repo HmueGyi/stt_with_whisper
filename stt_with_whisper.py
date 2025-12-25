@@ -1,14 +1,14 @@
 import gradio as gr
 import whisper
 
-# Load the medium model on CPU
+# Load the base model on CPU
 model = whisper.load_model("base", device="cpu")
 
 def transcribe_live(audio):
     if audio is None:
         return ""
-    # Use beam search for better accuracy
-    result = model.transcribe(audio, beam_size=5, temperature=0)
+    # Force English transcription
+    result = model.transcribe(audio, language="en", beam_size=5, temperature=0)
     return result["text"]
 
 def main():
@@ -21,7 +21,7 @@ def main():
         inputs=audio_input,
         outputs=output_text,
         title="Live Speech-to-Text",
-        description="Speak into your microphone and get higher-quality transcription (medium model, CPU)."
+        description="Speak into your microphone and get English-only transcription (base model, CPU)."
     )
     
     iface.launch()
