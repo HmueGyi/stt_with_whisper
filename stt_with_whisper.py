@@ -1,8 +1,8 @@
 import gradio as gr
 import whisper
 
-# Load the base model on CPU
-model = whisper.load_model("base", device="cpu")
+# Load the small model on CPU
+model = whisper.load_model("small", device="cpu")
 
 def transcribe_live(audio):
     if audio is None:
