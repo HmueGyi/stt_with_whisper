@@ -2,12 +2,12 @@
 
 A collection of Speech-to-Text (STT) tools using OpenAI's Whisper model. This repository contains two main projects:
 - `stt_eng`: Focused on English language transcription.
-- `stt_mm`: Supports multilingual transcription.
+- `stt_mm`: Focused on Myanmar language transcription.
 
 ## Features
 - Transcribes audio to text using Whisper
 - Python-based, easy to use
-- Separate modules for English and multilingual support
+- Separate modules for English and Myanmar support
 
 ## Requirements
 - Python 3.10+
