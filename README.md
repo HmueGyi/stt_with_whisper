@@ -1,14 +1,17 @@
 # stt_with_whisper
 
-A simple Speech-to-Text (STT) tool using OpenAI's Whisper model.
+A collection of Speech-to-Text (STT) tools using OpenAI's Whisper model. This repository contains two main projects:
+- `stt_eng`: Focused on English language transcription.
+- `stt_mm`: Supports multilingual transcription.
 
 ## Features
 - Transcribes audio to text using Whisper
 - Python-based, easy to use
+- Separate modules for English and multilingual support
 
 ## Requirements
 - Python 3.10+
-- See `requirements.txt` for dependencies
+- See `stt_eng/requirements.txt` and `stt_mm/requirements.txt` for dependencies specific to each module.
 
 ## Installation
 1. Clone this repository:
@@ -16,21 +19,29 @@ A simple Speech-to-Text (STT) tool using OpenAI's Whisper model.
    git clone <repo-url>
    cd stt_with_whisper
    ```
-2. (Optional) Create and activate a virtual environment:
+2. Navigate to the desired module (`stt_eng` or `stt_mm`):
    ```bash
-   python3 -m venv test_whisper_env
-   source test_whisper_env/bin/activate
+   cd stt_eng  # or cd stt_mm
    ```
-3. Install dependencies:
+3. (Optional) Create and activate a virtual environment:
+   ```bash
+   python3 -m venv env_name
+   source env_name/bin/activate
+   ```
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Usage
-Run the main script:
-```bash
-python stt_with_whisper.py
-```
+- For English transcription, navigate to `stt_eng` and run:
+  ```bash
+  python stt_with_whisper.py
+  ```
+- For multilingual transcription, navigate to `stt_mm` and run:
+  ```bash
+  python test_stt_mm.py
+  ```
 
 ## License
 MIT License
